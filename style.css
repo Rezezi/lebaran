@@ -1,0 +1,87 @@
+/* Global */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #047857;
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    perspective: 1000px;
+}
+
+/* Eid Card */
+.eid-card {
+    position: relative;
+    width: 220px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Amplop */
+.envelope {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #10b981;
+    border-radius: 10px;
+    border: 2px solid #065f46;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Tutup Amplop */
+.flap {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 40%;
+    background-color: #047857;
+    border-bottom: 2px solid #065f46;
+    border-radius: 10px 10px 0 0;
+    transform-origin: top;
+    transition: transform 0.7s ease;
+}
+
+/* Kertas Ucapan */
+.message {
+    position: absolute;
+    top: 0;
+    width: 90%;
+    height: 100%;
+    background-color: #fcd34d;
+    border-radius: 8px;
+    border: 2px solid #d97706;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Tengah vertikal */
+    align-items: center; /* Tengah horizontal */
+    text-align: center;
+    padding: 20px;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.7s ease, opacity 0.5s ease;
+}
+
+/* Teks */
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4a3400;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.text {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.6;
+    max-width: 85%;
+}
